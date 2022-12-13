@@ -1,13 +1,6 @@
-﻿int n;
-
-Console.WriteLine($"Введите число: ");
-int.TryParse(Console.ReadLine(), out n);
-
-int sum = 0;
-int s = n;
-while (s > 0)
+﻿int[] array = new int[8];
+for (int i = 0; i < array.Length; i++)
 {
-    sum = sum + s % 10;
-    s = s / 10;
+    array[i] = new Random().Next(10);
+    Console.Write($"|{array[i]}| ");
 }
-Console.Write($"Сумма цифр в числе {n} = {sum}");
